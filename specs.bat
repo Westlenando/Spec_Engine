@@ -25,8 +25,11 @@ echo.
 echo HARDWARE
 wmic baseboard get product,Manufacturer,version,serialnumber
 systeminfo | findstr /c:"Total Physical Memory"
+echo CPU:
 wmic cpu get name
+echo Connected drives:
 wmic diskdrive get name,model,size
+echo GPU(s):
 wmic path win32_videocontroller get name
 ECHO RAM sticks:
 wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator,manufacturer,partnumber
@@ -37,6 +40,8 @@ echo NETWORK
 echo.
 echo Adapter:
 wmic NIC where NetEnabled=true get Name,Speed
+echo.
+echo Past WiFi connections
 
 echo.
 echo USAGE
