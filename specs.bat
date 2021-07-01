@@ -40,9 +40,7 @@ echo NETWORK
 echo.
 echo Adapter:
 wmic NIC where NetEnabled=true get Name,Speed
-echo.
-echo Past WiFi connections
-
+::echo.
 echo.
 echo USAGE
 echo Memory Usage
