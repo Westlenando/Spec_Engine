@@ -36,7 +36,9 @@ wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator
 
 echo.
 echo NETWORK
-
+echo IP Address
+ipconfig | findstr IPv4
+ipconfig | findstr IPv6
 echo.
 echo Adapter:
 wmic NIC where NetEnabled=true get Name,Speed
